@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Quản lí nhân viên";
+}
+
+<div class="page-title">
+    <h1>Danh mục nhân viên</h1>
+</div>
+<div class="gird-content">
+    <div class="toolbar">
+        <button id="btn-add"><i class="icon icon-add"></i> Thêm</button>
+        <button id="btn-edit"><i class="icon icon-add"></i> Sửa</button>
+        <button id="btn-delete"><i class="icon icon-add"></i> Xóa</button>
+    </div>
+    <div class="grid">
+        <table border="1" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Tên nhân viên</th>
+                    <th>Email</th>
+                    <th>SDT</th>
+                    <th>Tên công ty</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="paging">
+
+    </div>
+</div>
+
+@section Dialog{
+    <div class="dialog-modal"></div>
+    <div class="dialog">
+        <div class="dialog-title">
+            <div class="dialog-title-text">
+                Thông tin nhân viên
+            </div>
+            <div class="dialog-title-cancel"></div>
+        </div>
+        <div class="dialog-content">
+            <form id="formEmployee">
+                <div class="form-group">
+                    <label>Mã nhân viên (*)</label>
+                    <input type="text" id="txtEmployeeCode" name="EmployeeCode" required />
+                </div>
+                <div class="form-group">
+                    <label>Tên nhân viên (*)</label>
+                    <input type="text" id="txtEmployeeName" name="EmployeeName" required />
+                </div>
+                <div class="form-group">
+                    <label>Email (*)</label>
+                    <input type="text" id="txtEmail" name="Email" required />
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="text" id="txtPhone" name="Phone" />
+                </div>
+                <div class="form-group">
+                    <label>Công ty</label>
+                    <input type="text" id="txtCompanyName" name="CompanyName" />
+                </div>
+            </form>
+        </div>
+        <div class="dialog-footer">
+            <button id="btn-save">Lưu</button>
+            <button id="btn-cancel">Hủy</button>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/js/employee.js"></script>
+}
